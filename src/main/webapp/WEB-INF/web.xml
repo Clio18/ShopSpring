@@ -11,4 +11,17 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>securityFilter</filter-name>
+        <filter-class>com.luxcampus.web.filter.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>/products</url-pattern>
+    </filter-mapping>
+
 </web-app>

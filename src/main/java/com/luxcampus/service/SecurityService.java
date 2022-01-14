@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Service
 public class SecurityService {
+
     private List<String> userTokens = Collections.synchronizedList(new ArrayList<>());
+
     public List<String> getUserTokens() {
         return userTokens;
     }

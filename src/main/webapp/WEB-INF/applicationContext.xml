@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.w3.org/2001/XMLSchema"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="productService" class="com.luxcampus.service.ProductService">
+        <constructor-arg ref="productDAO"/>
+    </bean>
+
+    <bean id="productDAO" class="com.luxcampus.dao.jdbc.ProductDAOImpl"/>
+
+    <bean id="userService" class="com.luxcampus.service.UserService">
+        <constructor-arg ref="userDAO"/>
+    </bean>
+
+    <bean id="userDAO" class="com.luxcampus.dao.jdbc.UserDAOImpl"/>
+
+    <bean id="securityService" class="com.luxcampus.service.SecurityService"/>
+
+</beans>

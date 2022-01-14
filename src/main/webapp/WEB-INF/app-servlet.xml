@@ -13,18 +13,6 @@
     <context:component-scan base-package="com.luxcampus"/>
     <mvc:annotation-driven/>
 
-    <bean id="productService" class="com.luxcampus.service.ProductService">
-        <constructor-arg ref="productDAO"/>
-    </bean>
-
-    <bean id="productDAO" class="com.luxcampus.dao.jdbc.ProductDAOImpl"/>
-
-    <bean id="userService" class="com.luxcampus.service.UserService">
-        <constructor-arg ref="userDAO"/>
-    </bean>
-
-    <bean id="userDAO" class="com.luxcampus.dao.jdbc.UserDAOImpl"/>
-
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath" value="classpath:templates/"/>
     </bean>
